@@ -1,0 +1,198 @@
+$highlight: rgba(154, 205, 50, 1);
+
+@mixin button {
+	height: 30px;
+	width: fit-content;
+	padding: 0 5px;
+	border: $highlight solid 1px;
+	border-radius: 4px;
+	outline: 0;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 28px;
+	vertical-align: middle;
+	display: flex;
+	cursor: pointer;
+	background: $highlight;
+
+	&:hover {
+		background: rgba(154, 205, 50, 0.75);
+	}
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	font-family: helvetica, sans-serif;
+	font-size: 16px;
+	background: white;
+	color: black;
+	-webkit-text-size-adjust: 100%;
+}
+
+.header {
+	padding: 10px 5px 0 5px;
+	text-align: center;
+	cursor: default;
+
+	h1 {
+		margin: 10px 0 25px 0;
+		font-size: 48px;
+		color: $highlight;
+		text-shadow: -1px 1px black, 1px 1px black, 1px -1px black, -1px -1px black;
+	}
+
+	p {
+		line-height: 24px;
+		margin: 6px 0;
+	}
+
+	span {
+		font-size: 24px;
+		vertical-align: middle;
+		padding: 0 12px;
+	}
+}
+
+.theform {
+	width: fit-content;
+	margin: 40px auto 30px auto;
+
+	h5 {
+		margin: 10px 4px 5px 0;
+	}
+
+	input {
+		height: 16px;
+		font-size: 12px;
+		width: 294px;
+		display: flex;
+		border: black 1px solid;
+		line-height: 16px;
+		padding: 3px;
+
+		&::placeholder {
+			color: transparent;
+		}
+
+		&:focus {
+			border-color: $highlight;
+			outline: 0;
+		}
+	}
+
+	textarea {
+		height: 4rem;
+		width: 296px;
+		display: flex;
+		border: black 1px solid;
+		line-height: 16px;
+
+		&::placeholder {
+			color: transparent;
+		}
+
+		&:focus {
+			border-color: $highlight;
+			outline: 0;
+		}
+	}
+
+	// recaptcha
+	> div {
+		height: 76px;
+		width: 302px;
+		padding: 10px 0 0 0;
+		margin: 5px 0 0 0;
+		overflow: hidden;
+	}
+
+	button {
+		@include button;
+		margin: 15px auto 0 auto;
+	}
+
+	img {
+		max-height: 30px;
+		width: auto;
+		margin: 15px auto 0 auto;
+		object-fit: scale-down;
+	}
+}
+
+.tac {
+	height: fit-content;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	background: $highlight;
+	padding: 5px 0;
+
+	button {
+		height: 24px;
+		width: 100%;
+		background: inherit;
+		font-family: inherit;
+		font-size: 12px;
+		font-style: italic;
+		text-align: left;
+		outline: 0;
+		border: 0;
+		padding: 0 8px;
+		cursor: pointer;
+		color: black;
+	}
+
+	> div {
+		height: fit-content;
+		padding: 0 8px 4px 8px;
+		font-size: 12px;
+		cursor: pointer;
+		text-align: justify;
+		color: black;
+	}
+}
+
+.outro {
+	width: 100%;
+	height: fit-content;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+
+	p {
+		cursor: default;
+		margin: 0 0 20px 0;
+		text-align: center;
+	}
+
+	form {
+		height: fit-content;
+		width: fit-content;
+		display: flex;
+		margin: auto;
+
+		input {
+			height: 25px;
+			width: 100px;
+
+			&:focus {
+				outline: 0;
+			}
+		}
+	}
+
+	button {
+		@include button;
+		margin: 20px auto 10px auto;
+	}
+
+	img {
+		height: auto;
+		width: 25%;
+		min-width: 250px;
+		display: flex;
+		margin: auto;
+	}
+}
