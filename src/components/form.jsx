@@ -105,6 +105,7 @@ export default class Form extends Component {
 						<input
 							name={title}
 							placeholder={title}
+							aria-label={`${title} text field`}
 							type={title === 'Email' ? 'email' : 'text'}
 							value={this.state.form[title]}
 							onClick={() => this.clickColor(i)}
@@ -119,6 +120,7 @@ export default class Form extends Component {
 				<textarea
 					name='Query'
 					placeholder='Query'
+					aria-label={'query text field'}
 					type='text'
 					value={this.state.form.Query}
 					onClick={() => this.clickColor(3)}

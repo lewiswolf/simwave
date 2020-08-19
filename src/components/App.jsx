@@ -13,6 +13,7 @@ export default class App extends Component {
 	};
 
 	render() {
+		console.log(document.getElementsByID(body).style);
 		return (
 			<React.Fragment>
 				<Route path='/' exact>
